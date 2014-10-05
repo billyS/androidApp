@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
 			}
         };
         
-        lm.requestLocationUpdates(lm.GPS_PROVIDER, 0, 0, listener);
+        lm.getLastKnownLocation(lm.GPS_PROVIDER);
         
       
         ((Button) findViewById(R.id.back)).setOnClickListener(mBackListener);
