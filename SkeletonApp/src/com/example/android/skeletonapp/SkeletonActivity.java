@@ -1,6 +1,10 @@
 package com.example.android.skeletonapp;
 
 import android.app.Activity;
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -29,7 +33,7 @@ public class SkeletonActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        
         // Inflate our UI from its XML layout description.
         setContentView(R.layout.skeleton_activity);
 

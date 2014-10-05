@@ -31,6 +31,9 @@
          to display to the user for the overall application, and provides
          a default label for all following components.  The syntax here is a
          reference to one of our string resources.-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    
     <application android:label="@string/skeleton_app">
 
         <!-- An Activity in the application - this is something the user
