@@ -14,53 +14,19 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends Activity {
+public class MenuActivity extends Activity {
     
     static final private int BACK_ID = Menu.FIRST;
 
     private EditText mEditor;
     
-    public MainActivity() {
+    public MenuActivity() {
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        LocationManager lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-        LocationListener listener = new LocationListener()
-        {
-
-			@Override
-			public void onLocationChanged(Location location) {
-				// TODO Auto-generated method stub
-				
-			}
-
-			@Override
-			public void onStatusChanged(String provider, int status,
-					Bundle extras) {
-				// TODO Auto-generated method stub
-				
-			}
-
-			@Override
-			public void onProviderEnabled(String provider) {
-				// TODO Auto-generated method stub
-				
-			}
-
-			@Override
-			public void onProviderDisabled(String provider) {
-				// TODO Auto-generated method stub
-				
-			}
-        };
-        
-        lm.getLastKnownLocation(lm.GPS_PROVIDER);
-        
-      
-        ((Button) findViewById(R.id.back)).setOnClickListener(mBackListener);
     }
 
     /**
@@ -77,8 +43,6 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-
-        menu.add(0, BACK_ID, 0, R.string.back).setShortcut('0', 'b');
         return true;
     }
 
@@ -96,12 +60,7 @@ public class MainActivity extends Activity {
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-        case BACK_ID:
-            finish();
-            return true;
-        }
-
+       
         return super.onOptionsItemSelected(item);
     }
 
