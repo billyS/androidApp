@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">BillysApp</string>
+    <string name="app_name">Billys App</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    
-     <!-- Simple strings. -->
-    <string name="skeleton_app">Skeleton App</string>
-    <string name="back">Back</string>
-    <string name="clear">Clear</string>
     <string name="edit_message">Enter a Message</string>
     
-    <string name="hello">welcome</string>
-    <string name="world">people</string>
     <string name="bAdd">Add one</string>
     <string name="bSub">Subtract one</string>
     <string name="text_area">test text area</string>
-    <string name="password_text">Type a command</string>
-    
-
-    <!-- This is a complex string containing style runs. -->
-    <string name="main_label">Hello <u>th<ignore>e</ignore>re</u>, <i>you</i> <b>Activity</b>!</string>
 
     <string name="counter">counter value is:</string>
 </resources>
