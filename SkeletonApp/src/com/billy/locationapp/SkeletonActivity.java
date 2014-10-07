@@ -1,4 +1,6 @@
-package com.example.android.skeletonapp;
+package com.billy.locationapp;
+
+import com.billy.locationapp.R;
 
 import android.app.Activity;
 import android.content.Context;

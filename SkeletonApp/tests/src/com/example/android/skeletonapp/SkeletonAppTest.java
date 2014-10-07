@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.skeletonapp;
+package com.billy.locationapp;
 
 import android.test.ActivityInstrumentationTestCase2;
 

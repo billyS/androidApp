@@ -22,6 +22,16 @@
 <resources>
     <!-- Retrieved via Resources.getColor() and friends. -->
     <color name="red">#f00</color>
+    <color name="button_red">#f00</color>
+    <color name="button_blue">#5F39F7</color>
+    
+    <color name="textView_red">#f00</color>
+    <color name="textView_blue">#5F39F7</color>
+    <color name="textView_green">#25DE1F</color>
+    <color name="textView_yellow">#DECE1F</color>
+    <color name="textView_pink">#DC27E6</color>
+    <color name="textView_grey">#91918C</color>
+    
 
     <!-- Retrieved via Resources.getDrawable() and friends. -->
     <drawable name="semi_black">#80000000</drawable>
