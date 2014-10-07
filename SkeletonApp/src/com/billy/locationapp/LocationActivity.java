@@ -21,14 +21,14 @@ import android.widget.EditText;
  * activity. Inside of its window, it places a single view: an EditText that
  * displays and edits some internal text.
  */
-public class SkeletonActivity extends Activity {
+public class LocationActivity extends Activity {
     
     static final private int BACK_ID = Menu.FIRST;
     static final private int CLEAR_ID = Menu.FIRST + 1;
 
     private EditText mEditor;
     
-    public SkeletonActivity() {
+    public LocationActivity() {
     }
 
     /** Called with the activity is first created. */
@@ -37,7 +37,7 @@ public class SkeletonActivity extends Activity {
         super.onCreate(savedInstanceState);
         
         // Inflate our UI from its XML layout description.
-        setContentView(R.layout.skeleton_activity);
+        setContentView(R.layout.location_activity);
 
         // Find the text editor view inside the layout, because we
         // want to do various programmatic things with it.
