@@ -1,85 +1,52 @@
 package com.billy.locationapp;
 
-import com.billy.locationapp.R;
-
-import android.app.Activity;
+import com.billy.locationapp.LocationUtils.MyLocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.app.Activity;
+import android.content.Context;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
 
-/**
- * This class provides a basic demonstration of how to write an Android
- * activity. Inside of its window, it places a single view: an EditText that
- * displays and edits some internal text.
- */
-public class LocationActivity extends Activity {
-    
-    public LocationActivity() {
-    }
+public class LocationActivity extends Activity{
 
-    /** Called with the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+	Button displayLocation;
+	TextView display;
+	String displayText="";
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.location_activity);
+		
+		displayLocation = (Button) findViewById(R.id.bDisplayLocation);
+
+		display = (TextView) findViewById(R.id.tvLocationDisplay);
+		
+        //Firebase fb = new Firebase(getResources().getString(R.string.fbURL));
         
-        // Inflate our UI from its XML layout description.
-        setContentView(R.layout.location_activity);
-    }
-
-    /**
-     * Called when the activity is about to start interacting with the user.
-     */
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    /**
-     * Called when your activity's options menu needs to be created.
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-
-        return true;
-    }
-
-    /**
-     * Called right before your activity's option menu is displayed.
-     */
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        super.onPrepareOptionsMenu(menu);
-
-        return true;
-    }
-
-    /**
-     * Called when a menu item is selected.
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+        LocationManager lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         
-        return super.onOptionsItemSelected(item);
-    }
+        final MyLocationListener listener = new MyLocationListener();
+        
+        // Register the listener with the Location Manager to receive location updates
+        lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, listener);
+        		
+        
+        //fb.setValue(location);
+		
+		displayLocation.setOnClickListener(new View.OnClickListener() 
+		{
+			@Override
+			public void onClick(View v) 
+			{
+					display.setText(listener.toString(listener.getLatitude()));
+			}
+		});
+		
+	}
+	
 
-    /**
-     * A call-back for when the user presses the back button.
-     */
-    OnClickListener mBackListener = new OnClickListener() {
-        public void onClick(View v) {
-            finish();
-        }
-    };
-
-    /**
-     * A call-back for when the user presses the clear button.
-     */
-    OnClickListener mClearListener = new OnClickListener() {
-        public void onClick(View v) {
-           
-        }
-    };
 }

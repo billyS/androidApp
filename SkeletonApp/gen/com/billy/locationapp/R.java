@@ -38,12 +38,14 @@ public final class R {
         public static final int violet=0x7f020002;
     }
     public static final class id {
-        public static final int aboutUs=0x7f0b0003;
+        public static final int aboutUs=0x7f0b0005;
         public static final int bAdd=0x7f0b0001;
+        public static final int bDisplayLocation=0x7f0b0004;
         public static final int bSub=0x7f0b0002;
-        public static final int exit=0x7f0b0005;
-        public static final int preferences=0x7f0b0004;
+        public static final int exit=0x7f0b0007;
+        public static final int preferences=0x7f0b0006;
         public static final int tvDisplay=0x7f0b0000;
+        public static final int tvLocationDisplay=0x7f0b0003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -61,11 +63,14 @@ public final class R {
         public static final int action_settings=0x7f080001;
         public static final int app_name=0x7f080000;
         public static final int bAdd=0x7f080004;
-        public static final int bSub=0x7f080005;
-        public static final int counter=0x7f080007;
+        public static final int bDisplayLocation=0x7f080005;
+        public static final int bSub=0x7f080006;
+        public static final int counter=0x7f080009;
         public static final int edit_message=0x7f080003;
+        public static final int fbURL=0x7f08000a;
         public static final int hello_world=0x7f080002;
-        public static final int text_area=0x7f080006;
+        public static final int locationTxt=0x7f080007;
+        public static final int text_area=0x7f080008;
     }
     public static final class style {
         public static final int ActionButton=0x7f090002;

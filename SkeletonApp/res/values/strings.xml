@@ -7,8 +7,11 @@
     <string name="edit_message">Enter a Message</string>
     
     <string name="bAdd">Add one</string>
+    <string name="bDisplayLocation">Display Location</string>
     <string name="bSub">Subtract one</string>
+    <string name="locationTxt">Your Location is: </string>
     <string name="text_area">test text area</string>
 
     <string name="counter">counter value is:</string>
+    <string name="fbURL">https://locationapp.firebaseio.com/</string>
 </resources>
